@@ -1,0 +1,126 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (100.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (168.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (13.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130126182546)
+  [1m[35m (115.3ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `roll` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (41.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130126182546')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-26 23:59:54 +0530
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (20ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-28 23:40:30 +0530
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (34ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130126182546)
+Migrating to AddAttributeEmail (20130128181151)
+  [1m[35m (45.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130128181151')
+Migrating to AddAttributeDept (20130128181218)
+  [1m[36m (56.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130128181218')[0m
+Migrating to AddAttributeAge (20130128181230)
+  [1m[35m (56.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130128181230')
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130126182546)
+Migrating to AddCollumsToUsers (20130128182407)
+  [1m[35m (320.5ms)[0m  ALTER TABLE `users` ADD `email` varchar(255)
+  [1m[36m (353.5ms)[0m  [1mALTER TABLE `users` ADD `age` int(11)[0m
+  [1m[35m (226.7ms)[0m  ALTER TABLE `users` ADD `dept` varchar(255)
+  [1m[36m (49.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130128182407')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130126182546)
+Migrating to AddCollumsToUsers (20130128182407)
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130126182546)
+Migrating to AddCollumsToUsers (20130128182407)
+Migrating to AddAttributeContactNo (20130128185359)
+  [1m[35m (39.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130128185359')
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130126182546)
+Migrating to AddCollumsToUsers (20130128182407)
+Migrating to AddAttributeContactNo (20130128185359)
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (11.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130126182546)
+Migrating to AddCollumsToUsers (20130128182407)
+Migrating to AddCloumn (20130129145445)
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130126182546)
+Migrating to AddCollumsToUsers (20130128182407)
+Migrating to AddCloumn (20130129145445)
+  [1m[35m (213.3ms)[0m  ALTER TABLE `users` ADD `contact_no` int(11)
+  [1m[36m (41.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130129145445')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (101.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (175.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (16.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130126182546)
+  [1m[35m (99.1ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `roll` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (41.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130126182546')[0m
+Migrating to AddCollumsToUsers (20130128182407)
+  [1m[35m (191.4ms)[0m  ALTER TABLE `users` ADD `email` varchar(255)
+  [1m[36m (192.7ms)[0m  [1mALTER TABLE `users` ADD `age` int(11)[0m
+  [1m[35m (192.7ms)[0m  ALTER TABLE `users` ADD `dept` varchar(255)
+  [1m[36m (41.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130128182407')[0m
+Migrating to AddCloumn (20130129145445)
+  [1m[35m (188.7ms)[0m  ALTER TABLE `users` ADD `contact_no` int(11)
+  [1m[36m (41.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130129145445')[0m
+Migrating to CreatePosts (20130129152621)
+  [1m[35m (97.0ms)[0m  CREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (41.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130129152621')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
