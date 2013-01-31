@@ -14,8 +14,16 @@ def new
 	
 end
 def destroy
-	user=User.find(params[:user])
+	user=User.find(params[:id])
 	user.destroy()
-	redirect_to index
+	redirect_to users_path
+end
+def edit
+	@user=User.find(params[:id])
+end
+def update
+	user=User.find(params[:id])
+	user.update_attributes
+	redirect_to users_path
 end
 end

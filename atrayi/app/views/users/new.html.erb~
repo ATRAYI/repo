@@ -12,6 +12,6 @@
 <%=f.text_field :age%></h3>
 <h3><%=f.label :contact_no%>
 <%=f.text_field :contact_no%></h3>
-<=f.submit%>
+<%=f.submit%>
 <%end%>
 
