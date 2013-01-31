@@ -1,12 +1,11 @@
-<html>
- 
-<%@users.each do |u|%>
-  <%=u.name%>
-  <%=u.email%>
-  <%=link_to "Show",user_path(@users)%>
-  <%=link_to "Edit",edit_user_path(@users)%><br>
+<%@users.each do|u|%>
+	<%=u.name%>
+	<%=u.email%>
+  	<%=link_to "Show",user_path(u)%>
+  	<%=link_to "Edit",edit_user_path(u)%>
+	<%=link_to "Delete",edit_user_path(u),:method=>:delete%><br>
 <%end%>
 <%=link_to "create User",new_user_path%>
 
-</html>
+
 
