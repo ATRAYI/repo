@@ -7,5 +7,5 @@ class CreatePosts < ActiveRecord::Migration
       t.timestamps
     end
 	add_foreign_key :posts,:users
- end
+  end
 end
