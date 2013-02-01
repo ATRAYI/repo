@@ -23,7 +23,8 @@ def edit
 end
 def update
 	user=User.find(params[:id])
-	user.update_attributes
+	user.update_attributes(params[:user])
+	user.save!
 	redirect_to users_path
 end
 end

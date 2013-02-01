@@ -3,7 +3,7 @@
 <h3><%=f.label :name%>
 <%=f.text_field :name%></h3>
 <h3><%=f.label :email%>
-<%=f.text_field :email%></h3>
+<%=f.email_field :email%></h3>
 <h3><%=f.label :dept%>
 <%=f.text_field :dept%></h3>
 <h3><%=f.label :roll%>
