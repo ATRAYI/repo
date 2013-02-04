@@ -7,15 +7,20 @@ def show
 end
 def create
 	@user=User.create(params[:user])
+	if @user.save
+		Usermailer.welcome_email(@user).deliver
+		 :notice => 'User was successfully created.'
+	else
+		render :action=>'create'
+	end
 	redirect_to users_path 
 end
 def new
-	@user=User.new
-	
+	@user=User.new	
 end
 def destroy
 	user=User.find(params[:id])
-	user.destroy()
+	user.destroy
 	redirect_to users_path
 end
 def edit
@@ -23,7 +28,8 @@ def edit
 end
 def update
 	user=User.find(params[:id])
-	user.update_attributes
+	user.update_attributes(params[:user])
+	user.save!
 	redirect_to users_path
 end
 end
