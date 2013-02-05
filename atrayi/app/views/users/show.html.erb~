@@ -1,12 +1,13 @@
-
-<%=@user.name %>
-<%=@user.email%>
-<%=@user.roll%>
-<%=@user.dept%>
-<%=@user.age%>
-<%=@user.contact_no%><br>
-<%=link_to "Edit", edit_user_path(@user)%>
-<%=link_to "Delete", user_path(@user), :method=>:delete %>
+<body style="background-color:#DDA0DD;">
+<h4 style="font-family:verdana;color:#8B0000;">Name:&nbsp;&nbsp;&nbsp;<%=@user.name %>&nbsp;&nbsp;<br>
+Email:&nbsp;&nbsp;&nbsp;<%=@user.email%>&nbsp;&nbsp;<br>
+Roll:&nbsp;&nbsp;&nbsp;<%=@user.roll%>&nbsp;&nbsp;<br>
+Dept.:&nbsp;&nbsp;&nbsp;<%=@user.dept%>&nbsp;&nbsp;<br>
+Age:&nbsp;&nbsp;&nbsp;<%=@user.age%>&nbsp;&nbsp;<br>
+Contact:&nbsp;&nbsp;&nbsp;<%=@user.contact_no%><br></h4>
+<%=link_to "Edit", edit_user_path(@user)%>&nbsp;&nbsp;
+<%=link_to "Delete", user_path(@user), :method=>:delete %>&nbsp;&nbsp;
 <%=link_to "Post", new_user_post_path(@user)%><br>
+<%=link_to "See Posts...",user_post_path(@user)%><br>
 
 

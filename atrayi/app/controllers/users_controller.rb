@@ -29,7 +29,10 @@ end
 def update
 	user=User.find(params[:id])
 	user.update_attributes(params[:user])
-	user.save!
-	redirect_to users_path
+	if user.save!
+		redirect_to users_path
+	else
+		render :action=>'edit'
+	end
 end
 end

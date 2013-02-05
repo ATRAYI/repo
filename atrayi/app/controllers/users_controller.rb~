@@ -9,7 +9,7 @@ def create
 	@user=User.create(params[:user])
 	if @user.save
 		Usermailer.welcome_email(@user).deliver
-		 :notice => 'User was successfully created.'
+		#:notice => 'User was successfully created.'
 	else
 		render :action=>'create'
 	end
@@ -29,7 +29,10 @@ end
 def update
 	user=User.find(params[:id])
 	user.update_attributes(params[:user])
-	user.save!
-	redirect_to users_path
+	if user.save
+		redirect_to users_path
+	else
+		render :action=>'edit'
+	end
 end
 end

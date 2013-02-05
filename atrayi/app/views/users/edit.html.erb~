@@ -1,3 +1,4 @@
+<body style="background-color:#B0E0E6;">
 <%=form_for @user do |f|%>
 <h3><%=f.label :name%>
 <%=f.text_field :name%></h3>
@@ -12,5 +13,6 @@
 <h3><%=f.label :contact_no%>
 <%=f.text_field :contact_no%></h3>
 <%=f.submit "Update"%>
-<%=link_to "update",user_path(f),:method=>:put%>
+
 <%end%>
+</body>

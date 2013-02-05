@@ -5,10 +5,9 @@ class User < ActiveRecord::Base
 	validates :name, :presence => true
 	validates :email, :presence => true, :uniqueness=>true
 		
-def before_create (name_capitalize)
-
-protected
-:name.capitalize
+before_create do |user|
+	user.name=user.name.capitalize
+	#if user.save!	
 end
 end
 

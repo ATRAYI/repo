@@ -1,11 +1,13 @@
+<body style="background-color:#ADD8E6;">
 <%@users.each do|u|%>
-	<%=u.name%>
-	<%=u.email%>
-  	<%=link_to "Show",user_path(u)%>
-  	<%=link_to "Edit",edit_user_path(u)%>
+	<h4 style="font-family:verdana;color:#8B0000;">Name:&nbsp;&nbsp;&nbsp;<%=u.name%>&nbsp;&nbsp;&nbsp;&nbsp;
+	Email:&nbsp;&nbsp;&nbsp;<%=u.email%></h4>
+  	<%=link_to "Show",user_path(u)%>&nbsp;&nbsp;
+  	<%=link_to "Edit",edit_user_path(u)%>&nbsp;&nbsp;
 	<%=link_to "Delete",user_path(u),:method=>:delete%><br>
 <%end%>
 <%=link_to "create User",new_user_path%>
+</body>
 
 
 

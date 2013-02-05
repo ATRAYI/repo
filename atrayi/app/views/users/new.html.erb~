@@ -1,17 +1,19 @@
-
+<body style="background-color:#ADFF2F;">
 <%=form_for @user do |f|%>
-<h3><%=f.label :name%>
+<h3 style="font-family:verdana;color:#0066CC;"><%=f.label :name%>
 <%=f.text_field :name%></h3>
-<h3><%=f.label :email%>
+<h3 style="font-family:verdana;color:#0066CC;"><%=f.label :email%>
 <%=f.email_field :email%></h3>
-<h3><%=f.label :dept%>
+<h3 style="font-family:verdana;color:#0066CC;"><%=f.label :dept%>
 <%=f.text_field :dept%></h3>
-<h3><%=f.label :roll%>
+<h3 style="font-family:verdana;color:#0066CC;"><%=f.label :roll%>
 <%=f.text_field :roll%></h3>
-<h3><%=f.label :age%>
+<h3 style="font-family:verdana;color:#0066CC;"><%=f.label :age%>
 <%=f.text_field :age%></h3>
-<h3><%=f.label :contact_no%>
+<h3 style="font-family:verdana;color:#0066CC;"><%=f.label :contact_no%>
 <%=f.text_field :contact_no%></h3>
 <%=f.submit%>
+</body
+
 <%end%>
 

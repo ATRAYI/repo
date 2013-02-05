@@ -1,10 +1,9 @@
-<p id="posts"><%= notice %></p>
- 
+<body style="background-color:#FFC0CB;">
 <%@posts.each do |post|%>
-Title:<%=post.title%><br>
-Description:<%=post.description%><br>
-<%=link_to "Delete post",user_post_path(post),:method=>:delete%>
-<%=link_to "edit post",edit_user_post_path(post)%>
+<h4 style="font-family:times now;color:#8B0000;">Title:&nbsp;&nbsp;&nbsp;<%=post.title%><br>
+Description:&nbsp;&nbsp;&nbsp;<%=post.description%><br></h4>
+<%=link_to "Delete post",user_post_path(post),:method=>:delete%>&nbsp;&nbsp;&nbsp;
+<%=link_to "Edit post",edit_user_post_path(post)%>
 <br>
-
 <%end%>
+</body>

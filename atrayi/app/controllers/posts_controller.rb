@@ -10,7 +10,6 @@ end
 def show
 	user =User.find(params[:id])
 	@posts=user.posts.find(:all)
-
 end
 
 def edit
@@ -25,6 +24,7 @@ def update
 	@post.save!
 	redirect_to user_post_path(user)
 end
+
 
 def destroy
 	user=User.find(params[:id])
