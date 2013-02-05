@@ -1,9 +1,11 @@
 <html>
-<%@posts.each do |p|%>
-Title:<%=p.title%><br>
-Description:<%=p.description%><br>
-<%=link_to "edit post",edit_user_post_path(p)%>
+<body style="background-color:#ADD8E6;">
+<%@posts.each do|p|%>
+<h4 style="font-family:verdana;color:#8B0000;">Title:&nbsp;&nbsp;<%=p.title%><br>
+Description:&nbsp;&nbsp;<%=p.description%><br>
+<%=link_to "edit post",edit_user_post_path(p)%>&nbsp;&nbsp;
 <%=link_to "delete post",user_post_path(p),:method=>:delete%>
-<hr>
+<hr></h4>
 <%end%>
+</body>
 </html>

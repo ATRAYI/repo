@@ -1,10 +1,11 @@
 <html>
+<body style="background-color:#ADFF2F;">
 <%=form_for @posts,:url=>user_post_path do |f|%>
-<h2><%=f.label :title%>
+<h2 style="font-family:verdana;color:#228B22;"><%=f.label :title%>
 <%=f.text_field :title%></h2>
-<h2><%=f.label :description%>
+<h2 style="font-family:verdana;color:#228B22;"><%=f.label :description%>
 <%=f.text_field :description%></h2>
-<%= f.submit%>
+<%= f.submit "Update Post"%>
 <%end%>
-
+</body>
 </html>
