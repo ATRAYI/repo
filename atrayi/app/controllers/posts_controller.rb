@@ -1,35 +1,73 @@
 class PostsController < ApplicationController
 def new
-	@post=Post.new
+@post=Post.new
 end
-def create 
-	user=User.find(params[:user_id])
-	post=user.posts.create(params[:post])
-	redirect_to user_path(user)
+
+def create
+user=User.find(params[:user_id])
+post=user.posts.create(params[:post])
+redirect_to user_path(user)
 end
 def show
-	user =User.find(params[:id])
-	@posts=user.posts.find(:all)
+user =User.find(params[:id])
+@posts=user.posts.find(:all)
+
 end
 
 def edit
-	user=User.find(params[:id])
-	@posts=user.posts.find(params[:user_id])
+user=User.find(params[:id])
+@posts=user.posts.find(params[:user_id])
 end
 
 def update
-	user=User.find(params[:id])
-	@post=user.posts.find(params[:user_id])
-	@post.update_attributes(params[:post])
-	@post.save!
-	redirect_to user_post_path(user)
+user=User.find(params[:id])
+@post=user.posts.find(params[:user_id])
+@post.update_attributes(params[:post])
+@post.save!
+redirect_to user_post_path(user)
 end
 
+def destroy
+user=User.find(params[:id])
+post=user.posts.find(params[:user_id])
+post.destroy
+redirect_to user_post_path(user)
+end
+end
+oi
+class PostsController < ApplicationController
+def new
+@post=Post.new
+end
+
+def create
+user=User.find(params[:user_id])
+post=user.posts.create(params[:post])
+redirect_to user_path(user)
+end
+def show
+user =User.find(params[:id])
+@posts=user.posts.find(:all)
+
+end
+
+def edit
+user=User.find(params[:id])
+@posts=user.posts.find(params[:user_id])
+end
+
+def update
+user=User.find(params[:id])
+@post=user.posts.find(params[:user_id])
+@post.update_attributes(params[:post])
+@post.save!
+redirect_to user_post_path(user)
+end
 
 def destroy
-	user=User.find(params[:id])
-	post=user.posts.find(params[:user_id])
-	post.destroy
-	redirect_to user_post_path(user)
+user=User.find(params[:id])
+post=user.posts.find(params[:user_id])
+post.destroy
+redirect_to user_post_path(user)
 end
 end
