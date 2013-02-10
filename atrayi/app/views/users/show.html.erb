@@ -7,7 +7,7 @@ Age:&nbsp;&nbsp;&nbsp;<%=@user.age%>&nbsp;&nbsp;<br>
 Contact:&nbsp;&nbsp;&nbsp;<%=@user.contact_no%><br></h4>
 <%=link_to "Edit", edit_user_path(@user)%>&nbsp;&nbsp;
 <%=link_to "Delete", user_path(@user), :method=>:delete %>&nbsp;&nbsp;
-<%=link_to "Post", new_user_post_path(@user)%><br>
-<%=link_to "See Posts...",user_post_path(@user)%><br>
+<%=link_to "Post",new_user_post_path(@user)%>&nbsp;&nbsp;
+<%=link_to "See Posts...",user_posts_path(@user)%><br>
 
 
