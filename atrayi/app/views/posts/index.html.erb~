@@ -1,9 +1,9 @@
 <body style="background-color:#DDA0DD;">
-<h4 style="font-family:verdana;color:#8B0000;"><% @posts.each do |post| %>
-    	Title:&nbsp;&nbsp;<%= post.title %>&nbsp;&nbsp;</h4>
-   	<%= link_to 'Show', user_post_path(post) %>&nbsp;&nbsp;
-    	<%= link_to 'Edit', edit_post_path(post) %>&nbsp;&nbsp;
-    	<%= link_to 'Destroy', user_post_path(post),:method => :delete %>
-<% end %>
-<%=link_to "New Post", new_user_post_path(@user)%><br>
+<%@posts.each do |post|%>
+Title:<%=post.title%>
+<%=link_to "Show Post..",user_post_path(@user,post)%>
+<br>
+<hr>
+
+<%end%>
 </body>

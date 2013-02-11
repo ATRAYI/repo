@@ -1,11 +1,9 @@
-<html>
 <body style="background-color:#ADD8E6;">
-<%@posts.each do|p|%>
-<h4 style="font-family:verdana;color:#8B0000;">Title:&nbsp;&nbsp;<%=p.title%><br>
-Description:&nbsp;&nbsp;<%=p.description%><br>
-<%=link_to "edit post",edit_user_post_path(p)%>&nbsp;&nbsp;
-<%=link_to "delete post",user_post_path(p),:method=>:delete%>
+<h4 style="font-family:verdana;color:#8B0000;">Title:&nbsp;&nbsp;<%=@post.title%><br>
+Description:&nbsp;&nbsp;<%=@post.description%><br>
+<%=link_to "edit post",edit_user_post_path(@user,@post)%>&nbsp;&nbsp;
+<%=link_to "delete post",user_post_path(@user,@post),:method=>:delete%>
 <hr></h4>
-<%end%>
+
 </body>
-</html>
+

@@ -1,6 +1,6 @@
 <html>
 <body style="background-color:#ADFF2F;">
-<%=form_for @posts,:url=>user_post_path do |f|%>
+<%=form_for @post,:url=>user_post_path(@user) do |f|%>
 <h2 style="font-family:verdana;color:#228B22;"><%=f.label :title%>
 <%=f.text_field :title%></h2>
 <h2 style="font-family:verdana;color:#228B22;"><%=f.label :description%>
